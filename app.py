@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 
 class Blag(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	entry = db.Column(db.BLOB())
+	entry = db.Column(db.Text())
 	timestamp = db.Column(db.DateTime, default=datetime.datetime.now)
         title = db.Column(db.String(1000))
 	def __init__(self,title,entry):
